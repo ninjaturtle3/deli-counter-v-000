@@ -4,14 +4,21 @@ katz_deli = []
 
 #build the line method showing everyone their current place in line
 # if nobody is in line puts "The line is currently empty."
-def line(deli_lines)
-  if deli_lines.length == 0
-     puts "The line is currently empty."
+def line(current_line)
+
+  if current_line.length > 0
+    current_line.each.with_index(1) do |name, index|
+      katz_deli.push("#{index}. #{name}")
+    end
+    puts "The line is currently: #{katz_deli.join(" ")}"
+  #  katz_deli.length == 0
+  #   puts "The line is currently empty."
    else
-     deli_lines.each.with_index(1) do |name, index|
-       katz_deli.push("#{index}. #{name}")
-     end
-     puts "The line is currently: #{katz_deli.join(" ")}"
+     puts "The line is currently empty."
+     #katz_deli.each.with_index(1) do |name, index|
+      # katz_deli.push("#{index}. #{name}")
+    # end
+    # puts "The line is currently: #{katz_deli.join(" ")}"
    end
  end
 
