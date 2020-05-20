@@ -1,24 +1,19 @@
 #at the start of the day, there aren't any customers, the queue is empty
 #the empty queue will be represented by an empty array
-katz_deli = []
+#katz_deli = []
 
 #build the line method showing everyone their current place in line
 # if nobody is in line puts "The line is currently empty."
-def line(current_line)
+def line(katz_deli)
 
-  if current_line.length > 0
-    current_line.each.with_index(1) do |name, index|
-      katz_deli.push("#{index}. #{name}")
+  if katz_deli.length > 0
+    katz_deli.each.with_index(1) do |name,index|
+    puts "The line is currently: #{index+1}. #{name}"
     end
-    puts "The line is currently: #{katz_deli.join(" ")}"
-  #  katz_deli.length == 0
-  #   puts "The line is currently empty."
+
    else
      puts "The line is currently empty."
-     #katz_deli.each.with_index(1) do |name, index|
-      # katz_deli.push("#{index}. #{name}")
-    # end
-    # puts "The line is currently: #{katz_deli.join(" ")}"
+
    end
  end
 
