@@ -6,13 +6,14 @@
 # if nobody is in line puts "The line is currently empty."
 def line(katz_deli)
 katz_deli = []
-  if katz_deli.length > 0
-    katz_deli.each.with_index(1) do |name,index|
-    katz_deli << "#{index}. #{name}"
-    end
-  puts "The line is currently:#{katz_deli}"
-   else
+  if katz_deli == 0
      puts "The line is currently empty."
+   else
+       katz_deli.each.with_index(1) do |name,index|
+       katz_deli << "#{index}. #{name}"
+       end
+     puts "The line is currently:#{katz_deli}"
+
 
    end
  end
