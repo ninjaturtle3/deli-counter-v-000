@@ -38,13 +38,12 @@ end
 def now_serving(katz_deli)
   ##if nobody's in line, puts "There is nobody waiting to be served!"
     ##it puts the next person in line and then remove them from the front --will use the .shift method to remove the first element in the array
-  if katz_deli.length > 0
-    puts "Currently serving #{(katz_deli[0])}."
-    katz_deli.shift()
-
-  else
+  if katz_deli.length == 0
     puts "There is nobody waiting to be served!"
-
+  else
+    
+      puts "Currently serving #{(katz_deli[0])}."
+      katz_deli.shift()
   end
 
 
