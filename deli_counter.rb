@@ -10,7 +10,7 @@ katz_deli = []
     katz_deli.each.with_index(1) do |name,index|
     katz_deli << "#{index}. #{name}"
     end
-  puts "The line is currently #{katz_deli}:
+  puts "The line is currently:#{katz_deli}""
    else
      puts "The line is currently empty."
 
